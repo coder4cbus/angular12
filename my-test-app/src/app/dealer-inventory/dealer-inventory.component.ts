@@ -71,5 +71,9 @@ export class DealerInventoryComponent implements OnInit {
       alert ("come visit us in our showroom!")
     }
   }
+
+  addVehicle(v:Vehicle) {
+    this.inventory.push(v)
+  }
   
 }
