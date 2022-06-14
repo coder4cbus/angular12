@@ -1,0 +1,13 @@
+<!-- <p>photo-gallery works!</p> -->
+<div>
+    <div>
+        <img [src]="imageList[currentIndex]" />
+    </div>
+    <div>
+        <button [disabled]="currentIndex==0"
+        (click)="movePrevious()">Previous</button>
+        <button [disabled]="currentIndex==imageList.length-1"
+        (click)="moveNext()">Next</button>
+    </div>
+</div>
+

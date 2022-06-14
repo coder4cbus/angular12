@@ -65,5 +65,11 @@ export class DealerInventoryComponent implements OnInit {
   deleteVehicle(car:Vehicle) {
     this.inventory = this.inventory.filter(c => c.VIN != car.VIN)
   }
+
+  handlePhotoNavigation(photoIndex:number, car:Vehicle) {
+    if (photoIndex == car.photos.length - 1) {
+      alert ("come visit us in our showroom!")
+    }
+  }
   
 }
