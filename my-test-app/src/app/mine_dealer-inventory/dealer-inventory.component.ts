@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Vehicle } from '../vehicle'
 
 @Component({
@@ -7,8 +7,12 @@ import { Vehicle } from '../vehicle'
   styleUrls: ['./dealer-inventory.component.css']
 })
 export class DealerInventoryComponent implements OnInit {
+  // @Input() car:Vehicle | undefined 
+
 
   vehicleToEdit?:Vehicle
+
+  // inventory:Vehicle[] = []
 
   inventory:Vehicle[] = [
     {
@@ -74,17 +78,22 @@ export class DealerInventoryComponent implements OnInit {
     this.inventory.push(v)
   }
 
-  beginEditing(v:Vehicle) {
+  beginEditing = (v:Vehicle) => {
     this.vehicleToEdit = v
   }
+
+  handleSubmit = (v:Vehicle) => {
+  }
   
-  commitEdit(v:Vehicle) {
+  commitEdit = (v:Vehicle) => {
     //Copy the edited data
     Object.assign(this.vehicleToEdit, v)
   
     this.vehicleToEdit = undefined
-  
   }
-
+  
+  cancelEdit = () => {
+    this.vehicleToEdit = undefined
+  }
 
 }
