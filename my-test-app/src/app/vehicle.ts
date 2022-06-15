@@ -8,4 +8,6 @@ export class Vehicle {
         public featured: boolean,
         public photos: string[]) {
     }
+
+    
 }

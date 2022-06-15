@@ -38,7 +38,10 @@ canceler = new EventEmitter
   }
 
   handleCancel() {
-    this.canceler.emit()
+    // this.canceler.emit()
+    this.canceled = true
+    this.canceler.emit(this.canceled)
+    this.canceled = false
   }
 
 }
