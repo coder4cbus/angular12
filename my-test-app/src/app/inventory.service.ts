@@ -26,7 +26,7 @@ export class InventoryService {
     }
   }
 
-  public deleteVehicle(vehicleToDelete:Vehicle) {
+  public deleteVehicle(vehicleToDelete: Vehicle) {
     this.inventory = this.inventory.filter(v => v.VIN !== 
       vehicleToDelete.VIN)
   }
