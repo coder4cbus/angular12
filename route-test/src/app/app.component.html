@@ -1,0 +1,11 @@
+<h1>Simple SPA!</h1>
+
+<a [routerLink]="['/']">Home</a>&nbsp;
+<a [routerLink]="['/news']">News</a>&nbsp;
+<a [routerLink]="['/about']">About</a>
+
+<div id=main>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- search for router-outlet to locate the base component where subcomponents aka selectors get inserted -->
