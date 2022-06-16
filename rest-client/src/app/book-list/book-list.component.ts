@@ -24,6 +24,9 @@ export class BookListComponent implements OnInit {
     this.dataService.deleteBook(book.isbn).subscribe (_ => {
       // Delete local copy od the book
       this.books = this.books.filter(b => b.isbn !== book.isbn)
+    // },
+    // err => {
+    //   alert(err)
     })
   }
   
